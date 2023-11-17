@@ -1,0 +1,8 @@
+<!-- product-details.component.html -->
+<div class="card">
+  <img [src]="product.image" alt="{{ product.title }}" />
+  <h2>{{ product.category }}</h2>
+  <p>{{ product.description }}</p>
+  <p>{{ product.price | currency }}</p>
+  <button (click)="addToCart(product)">Add to Cart</button>
+</div>

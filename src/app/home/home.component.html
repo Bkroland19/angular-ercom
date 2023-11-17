@@ -1,0 +1,27 @@
+<h1>All Products</h1>
+<div class="flex flex-wrap items-center justify-between">
+  <div *ngFor="let product of products" class="shadow-2xl h-[30%] w-[30%]">
+    <!-- product-card.component.html -->
+    <div class="rounded overflow-hidden">
+      <img
+        style="height: 100"
+        class="w-full"
+        [src]="product.image"
+        alt="Product Image"
+      />
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{{ product.category }}</div>
+        <!-- <p class="text-gray-700 text-base text-ellipsis">{{ product.description }}</p> -->
+        <p class="text-gray-900 font-bold text-xl mb-2">
+          {{ product.price | currency }}
+        </p>
+        <button
+          (click)="addToCart(product)"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

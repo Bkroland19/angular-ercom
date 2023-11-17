@@ -1,0 +1,17 @@
+<!-- navbar.component.html -->
+<nav
+  [class.bg-gray-800]="isDarkMode"
+  [class.bg-blue-500]="!isDarkMode"
+  class="p-4"
+>
+  <ul class="flex items-center space-x-4 text-white">
+    <li>
+      <a routerLink="/" class="hover:text-gray-300">Home</a>
+    </li>
+    <li>
+      <a routerLink="/cart" class="hover:text-gray-300"
+        >Cart ({{ cartItemsCount }})</a
+      >
+    </li>
+  </ul>
+</nav>
