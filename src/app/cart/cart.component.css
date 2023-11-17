@@ -1,5 +1,4 @@
 .container {
-    height: 100vh;
-    background-color: aqua;
+   flex-grow: inherit;
     width: 100%;
 }
